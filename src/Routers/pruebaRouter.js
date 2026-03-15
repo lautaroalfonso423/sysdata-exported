@@ -1,3 +1,8 @@
-const router = require("./router");
+const router = require("express");
+const prueba = require("../Controllers/pruebaController");
 
-router.get()
+const pruebaRouter = router()
+
+pruebaRouter.get("/", prueba.getPrueba)
+
+module.exports = pruebaRouter;

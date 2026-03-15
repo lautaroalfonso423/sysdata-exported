@@ -1,14 +1,15 @@
 const express = require("express")
 const morgan = require("morgan")
-const nodemon = require("nodemon")
 const cors = require("cors")
+const router = require("./Routers/router")
 
 
 const app = express()
 
 app.use(morgan("dev"))
-app.use(nodemon)
 app.use(cors())
+
+app.use(router)
 
 
 module.exports = app 
